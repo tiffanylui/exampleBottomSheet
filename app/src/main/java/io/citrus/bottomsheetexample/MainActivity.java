@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener expandedOrCollapsed = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+            // Toggling the states
             if(behaviour.getState() == BottomSheetBehavior.STATE_COLLAPSED){
                 behaviour.setState(BottomSheetBehavior.STATE_EXPANDED);
             } else {
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             if (behaviour.getState() == BottomSheetBehavior.STATE_HIDDEN){
+                // setHideable allows for the bottom sheet to be hidden
                 behaviour.setHideable(false);
                 behaviour.setState(BottomSheetBehavior.STATE_EXPANDED);
             } else {
